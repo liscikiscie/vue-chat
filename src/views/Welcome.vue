@@ -1,10 +1,15 @@
 <template>
-
+    <WelcomeComponent/>
 </template>
 
 <script>
+    import WelcomeComponent from '@/components/WelcomeForm.vue';
+
     export default {
-        name: 'Welcome'
+        name: 'Welcome',
+        components: {
+            WelcomeComponent
+        }
     }
 </script>
 

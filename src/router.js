@@ -1,17 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Welcome from '@/views/Welcome.vue'
+import WelcomeForm from '@/components/WelcomeForm.vue'
+import Chat from '@/components/Chat.vue'
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'Welcome',
-      component: Welcome
-    },
-  ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'WelcomeForm',
+            component: WelcomeForm
+        },
+        {
+            path: '/chat',
+            name: 'Chat',
+            component: Chat,
+            props: true
+        }
+    ]
 })
